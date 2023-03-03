@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev --host 0.0.0",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^6.4.1",
+    "daisyui": "^2.51.3",
+    "nuxt": "^3.2.3",
+    "prisma": "^4.11.0"
+  },
+  "dependencies": {
+    "@prisma/client": "4.11.0"
+  }
+}
