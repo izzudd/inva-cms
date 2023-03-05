@@ -2,18 +2,29 @@
   "private": true,
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev --host 0.0.0",
+    "dev": "nuxt dev --host 0.0.0.0",
+    "dev:prepare": "npm-run-all migrate:dev mock",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "migrate:dev": "prisma migrate dev",
+    "mock": "node script/mock-db.mjs",
+    "test": "nuxi test",
+    "test:unit": "vitest"
   },
   "devDependencies": {
+    "@faker-js/faker": "^7.6.0",
     "@nuxtjs/tailwindcss": "^6.4.1",
+    "@vueuse/core": "^9.13.0",
+    "@vueuse/integrations": "^9.13.0",
     "daisyui": "^2.51.3",
+    "npm-run-all": "^4.1.5",
     "nuxt": "^3.2.3",
-    "prisma": "^4.11.0"
-  },
-  "dependencies": {
-    "@prisma/client": "4.11.0"
+    "nuxt-vitest": "^0.6.6",
+    "prisma": "^4.11.0",
+    "slugify": "^1.6.5",
+    "@nuxt/test-utils": "^3.2.3",
+    "@prisma/client": "4.11.0",
+    "vitest": "^0.29.2"
   }
 }
