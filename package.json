@@ -7,7 +7,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "migrate:dev": "prisma migrate dev",
+    "migrate:dev": "prisma migrate dev --name dev",
     "mock": "node script/mock-db.mjs",
     "test": "nuxi test",
     "test:unit": "vitest"
