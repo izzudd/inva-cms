@@ -14,7 +14,7 @@ model Schema {
   id          Int     @id @default(autoincrement())
   title       String
   description String?
-  fields      Json
+  widgets     Json
 
   datas Data[]
 
